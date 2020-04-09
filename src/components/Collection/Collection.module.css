@@ -1,0 +1,10 @@
+.Collection{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 120px;
+    grid-gap:20px;
+    padding:25px 30px;
+   
+}
+
+
