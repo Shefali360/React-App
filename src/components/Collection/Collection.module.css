@@ -1,0 +1,13 @@
+.Box{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    margin:10px 0;
+    border-radius: 7px;
+    padding:20px 0px;
+}
+
+.Label{
+    font-size:12px;
+    font-weight: bold;
+}
