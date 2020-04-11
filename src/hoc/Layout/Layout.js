@@ -1,13 +1,13 @@
 import React from "react";
 import Toolbar from "../../components/Toolbar/Toolbar";
 import Aux from '../Aux/Aux';
-import MainConatiner from "../../components/MainContainer/MainContainer";
+import MainContainer from "../../components/MainContainer/MainContainer";
 
 const Layout=()=> {
     return (
       <Aux>
         <Toolbar />
-        <MainConatiner/>
+        <MainContainer/>
       </Aux>
     );
 }

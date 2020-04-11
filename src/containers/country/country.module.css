@@ -1,0 +1,24 @@
+.List{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height:370px;
+    list-style-type:none;
+}
+
+.List::-webkit-scrollbar {
+    width: 3px;
+    background: #dfe1e8;
+}
+
+.List::-webkit-scrollbar-thumb {
+    background: #7a7d89;
+
+}
+.Country{
+    background-color: #fff;
+    padding:10px 10px 10px 15px;
+    margin:8px;
+    border-radius: 8px;
+    box-shadow:1px 1px 8px 0.1px #ddd;
+    text-align:left;
+}

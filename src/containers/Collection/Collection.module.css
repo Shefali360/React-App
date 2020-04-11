@@ -1,8 +1,9 @@
 .Box{
     display: flex;
+    align-items: center ;
     justify-content: space-evenly;
     background-color: #ffffff;
-    margin:10px 0;
+    margin:10px 15px 10px 0px;
     border-radius: 7px;
     padding:20px 0px;
 }
@@ -10,4 +11,11 @@
 .Label{
     font-size:12px;
     font-weight: bold;
+    
+}
+
+.Case{
+    font-size:23px;
+    font-weight: bold;
+    margin-top: 10px;
 }

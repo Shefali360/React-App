@@ -1,11 +1,12 @@
 import * as actionTypes from '../actions/actionTypes';
 import {updateObject} from '../../shared/utility';
 
-const coronaStats={
+const initialState={coronaStats:{
    totalCases:0,
     recovered:0,
     activeCases:0,
     totalDeaths:0
+}
 }
 
 
@@ -20,7 +21,7 @@ return(updateObject(state,{
 ))
 }
 
-const reducer=(state=coronaStats,action)=>{
+const reducer=(state=initialState,action)=>{
     switch(action.type){
         case actionTypes.RENDER_CASES:return renderCases(state,action);
         default:return state;

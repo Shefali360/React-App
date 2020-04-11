@@ -1,8 +1,8 @@
 import React from 'react';
-import totalCasesGraph from '../../../../images/totalcases.png';
-import recoveredGraph from '../../../../images/recovered.png';
-import activeCasesGraph from '../../../../images/activecases.png';
-import deathsGraph from '../../../../images/deaths.png';
+import totalCasesGraph from '../../../images/totalcases.png';
+import recoveredGraph from '../../../images/recovered.png';
+import activeCasesGraph from '../../../images/activecases.png';
+import deathsGraph from '../../../images/deaths.png';
 
 const Graphs=(props)=>{
 let graph=null;

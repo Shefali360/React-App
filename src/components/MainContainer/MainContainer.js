@@ -1,20 +1,34 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
-import Collection from '../Collection/Collection';
-import RecoveryRatio from '../../containers/RecoveryRatio/RecoveryRatio';
+import Collection from '../../containers/Collection/Collection';
+import RecoveryRatio from '../../components/RecoveryRatio/RecoveryRatio';
+import Country from '../../containers/country/country';
+import styles from './MainContainer.module.css';
+import Search from '../../components/countrywiseCases/country/Search/Search';
+import Aux from '../../hoc/Aux/Aux';
 
 const MainContainer=()=>{
 return(
     <Container fluid>
-        <Row >
-            <Col sm={9}>
+        <Row noGutters={true}>
+            <Col md={9}>
+            <Row noGutters={true}>
+            <Col md={12}>
             <Collection/>
             </Col>
-            <Col sm={3}>
+            <Col className={styles.CountrywiseCases}sm={4}>
+            <Search/>
+            <Country/>
+            </Col>
+            </Row>
+            </Col>
+            <Col md={3}>
+            <Col md={12}>
             <RecoveryRatio/>
             </Col>
+            </Col>
         </Row>
-    </Container>
+        </Container>
 )
 
 }

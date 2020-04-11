@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import Cases from "./CasesDiv/CasesDiv";
-import { Row, Col, Container } from "react-bootstrap";
-import CountrywiseCases from "../../containers/countrywiseCases/countrywiseCases";
-import * as casesActions from "../../store/actions/index";
+import Cases from "../../components/CasesDiv/CasesDiv";
+import { Row, Col } from "react-bootstrap";
+import * as actions from "../../store/actions/index";
 import { connect } from "react-redux";
-import Graphs from "../../components/Collection/CasesDiv/Graphs/Graphs";
+import Graphs from "../../components/CasesDiv/Graphs/Graphs";
 import styles from './Collection.module.css';
-import Label from '../../components/Collection/CasesDiv/Label/Label';
+import Label from '../../components/CasesDiv/Label/Label';
+import Aux from '../../hoc/Aux/Aux';
 
 class Collection extends Component {
   componentDidMount() {
-    this.props.onFetchCases();
+    this.props.onFetchCases()
   }
 
   render() {
     let casesData = null;
     if (this.props.cases) {
-      let data = [];
+    let data = [];
       let object = this.props.cases;
       for (let key in object) {
         let newObj = {};
@@ -31,38 +31,31 @@ class Collection extends Component {
               <div className={styles.Box}>
               <div>
               <Label class={styles.Label} label={value}/>
-              <Cases label={value} casedata={cases[value]} /></div>
+              <Cases class={styles.Case}label={value} casedata={cases[value]} />
+              </div>
               <Graphs label={value} />
               </div>
             </Col>
           );
         }
-      });
-    }
-
-    return (
-      <Container>
-        <Row>{casesData}</Row>
-        <Row>
-          <Col sm={5}>
-            <CountrywiseCases />
-          </Col>
-          <Col></Col>
-        </Row>
-      </Container>
-    );
-  }
+      })
+     };
+     return (
+      <Aux>
+      <Row noGutters={true}>{casesData}</Row>
+      </Aux>
+  );
+}
 }
 const mapStateToProps = (state) => {
-  console.log(state.coronaStats);
   return {
-    cases: state.coronaStats,
+    cases: state.cases.coronaStats
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onFetchCases: () => dispatch(casesActions.fetchCases()),
+    onFetchCases: () => dispatch(actions.fetchCases())
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Collection);
