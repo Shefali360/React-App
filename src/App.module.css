@@ -13,6 +13,12 @@
 .Contain{
   width:100%;
   max-width:1600px;
-
+  margin:0 auto;
 }
 
+.CircularProgressbar-path{
+  stroke: rgb(6, 186, 144);
+  stroke-dasharray: 289.027px, 289.027px;
+  stroke-dashoffset: 222.839px;
+  stroke-width:20
+}

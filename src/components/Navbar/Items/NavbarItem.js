@@ -4,7 +4,7 @@ import styles from './NavbarItem.module.css';
 
 const NavbarItem=(props)=>{
     return(<div className={styles.NavDiv}><li className={styles.NavbarList}>
-        <NavLink className={styles.NavbarEle} to={props.link}
+        <NavLink className={styles.NavbarEle} to={props.link} 
          activeClassName={styles.active}>{props.children}
         </NavLink></li></div>);
 }

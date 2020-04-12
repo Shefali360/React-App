@@ -8,6 +8,8 @@ import Search from '../../components/countrywiseCases/country/Search/Search';
 import Twitter from '../../components/Tweets/Tweets';
 import SpreadTrends from '../../containers/SpreadTrends/SpreadTrends';
 import SpreadGraph from '../SpreadGraph/SpreadGraph';
+import News from '../News/News';
+import Map from '../../components/Map/Map';
 
 const MainContainer=()=>{
 return(
@@ -23,9 +25,13 @@ return(
             <Country/>
             </Col>
             <Col sm={8}>
+            <Map/>
             </Col>
             <Col sm={6}>
             <SpreadTrends/>
+            </Col>
+            <Col sm={6}>
+            <News/>
             </Col>
             </Row>
             </Col>

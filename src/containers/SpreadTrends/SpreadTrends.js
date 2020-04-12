@@ -6,15 +6,14 @@ import styles from './SpreadTrends.module.css';
 class SpreadTrends extends Component{
     render(){
         return(
-        <div className={styles.TopHeading}>
-        <div>Spread Trends</div>
+        <div className={styles.Box}>
+        <div className={styles.Heading}>Spread Trends</div>
         <div>
-           <ul>
+           <ul className={styles.Toggler}>
                <SpreadGraph link="/home/confirmed">Confirmed</SpreadGraph>
                <SpreadGraph link="/home/recovered">Recovered</SpreadGraph>
                <SpreadGraph link="/home/deceased">Deceased</SpreadGraph>
            </ul>
-
         </div>
         </div>);
     }

@@ -4,7 +4,7 @@ import styles from './CasesDiv.module.css';
 
 const CasesDiv=(props)=>{
    return(  
-   <div className={styles.CollectionItem}>
+   <div>
       <p className={props.class}>{props.casedata}</p>
    </div>);
 }

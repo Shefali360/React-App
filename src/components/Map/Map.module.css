@@ -1,0 +1,67 @@
+.Map{
+    padding:15px;
+    background-color: #ffffff;
+    margin:0 15px;
+     box-sizing: border-box;
+    border-radius: 7px;
+}
+.MapHeading{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.MapHeading p{
+    font-size:17px;
+    font-weight: bold;
+    margin-right:80px;
+}
+
+.MapHeading span{
+    font-size: 14px;
+
+}
+
+.MapHeading span:before{
+    content:"";
+    display: inline-block;
+    width:15px;
+    height:15px;
+    margin-right:5px;
+    border-radius: 4px;
+}
+
+.FirstIndicator:before{
+    background-color:#ff0019 ;
+
+
+}
+
+.SecondIndicator:before{
+    background-color:#ffc4c6 ;
+    margin-left:20px;
+}
+.MapArea{
+    background-color: #fbf6f6;
+    border-radius: 7px;
+    margin:20px 7px 7px;
+    position: relative;
+}
+
+.Map i{
+    padding:10px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    position: absolute;
+    left:0;
+    top:0;
+    transform: translate(40%,40%);
+    box-shadow:1px 1px 8px 0.1px #ddd;
+}
+
+/* .ZoomFeature{
+    position: absolute;
+    top:0;
+    right:0;
+    transform: translate(40%,40%);
+} */
+

@@ -4,7 +4,7 @@ import styles from './Tweets.module.css';
 
 const Tweets=(props)=>{
     return(
-        <p className={styles.Tweets}>Latest Tweets<img src={TwitterImg} alt="twitter-icon"/></p>
+        <div className={styles.Twitter}><p className={styles.Tweets}>Latest Tweets<img className={styles.TwitterIcon}src={TwitterImg} alt="twitter-icon"/></p></div>
     );
 }
 

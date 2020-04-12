@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import styles from './RecoveryRatio.module.css';
 import {CircularProgressbar,buildStyles} from 'react-circular-progressbar';
 import {connect} from 'react-redux';
-
 import Aux from'../../hoc/Aux/Aux';
 
 class RecoveryRatio extends Component{
@@ -32,16 +31,15 @@ class RecoveryRatio extends Component{
     let percent=((arr[1]/arr[0])*100).toFixed(1);
 
         console.log(percent);
-        return (<p className={styles.RecoveryRatio}>Ratio of Recovery
+        return (<div className={styles.RecoveryRatio}><p>Ratio of Recovery</p>
         <CircularProgressbar className={styles.Progress}value={percent} text={`${percent}%`} 
         styles={buildStyles({
             textSize:'14px',
             pathColor: `#06ba90`,
-            textColor: 'black',
-            trailColor: '#686c8526',
+            trailColor: `#686c8526`,
         })}
-            /><span className={styles.StatsAffected}>{affected.toLocaleString()}</span><span className={styles.StatsRecovered}>{recovered.toLocaleString()}</span></p>
-            )
+            /><span className={styles.StatsAffected}>{affected.toLocaleString()}</span><span className={styles.StatsRecovered}>{recovered.toLocaleString()}</span>
+            </div>)
     
 }
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import Aux from '../../hoc/Aux/Aux';
 import {NavLink} from 'react-router-dom';
+import styles from './SpreadGraph.module.css';
 
 const SpreadGraph=(props)=>{
     return(
         <li>
-        <NavLink to={props.link}>{props.children}
+        <NavLink activeClassName={styles.active} className={styles.ToggleButtons}to={props.link}>{props.children}
         </NavLink>
         </li>
     );
