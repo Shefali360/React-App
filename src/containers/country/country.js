@@ -17,7 +17,6 @@ class Country extends Component {
       console.log(count)
         countrydata = count.map((countries) => {
             return (
-             
               <li key={countries.country} >
                 <CountrywiseCases class={styles.Country} flag={countries.flag} country={countries.country}
                  affected={countries.total_cases} recovered={countries.total_recovered}/>

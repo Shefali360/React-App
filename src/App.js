@@ -5,7 +5,7 @@ import styles from './App.module.css';
 
 const app=()=> {
   return (
-    <div className={styles.App}>
+    <div className={[styles.App,styles.Contain].join(' ')}>
       <Layout/>
     </div>
   );

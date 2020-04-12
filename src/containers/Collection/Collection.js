@@ -31,7 +31,7 @@ class Collection extends Component {
               <div className={styles.Box}>
               <div>
               <Label class={styles.Label} label={value}/>
-              <Cases class={styles.Case}label={value} casedata={cases[value]} />
+              <Cases class={styles.Case}label={value} casedata={cases[value].toLocaleString()} />
               </div>
               <Graphs label={value} />
               </div>

@@ -9,7 +9,6 @@ const initialState={coronaStats:{
 }
 }
 
-
 const renderCases=(state,action)=>{
     let casedata=action.casedata;
 return(updateObject(state,{
