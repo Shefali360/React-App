@@ -1,2 +1,3 @@
 export const RENDER_CASES='RENDER_CASES';
 export const RENDER_COUNTRIES='RENDER_COUNTRIES';
+export const RENDER_MAP='RENDER_MAP';

@@ -11,13 +11,11 @@ const CountrywiseCases = (props) => {
            <img className={styles.Img}src={props.flag} alt="country-flag"/>
            <span className={styles.CountryName}> {props.country}
             </span>
-            <div>
-            <span className={styles.TextBottom}>{props.affected}</span>
-            <span className={styles.TextBottomRight}>{props.recovered}</span>
-            </div>
             </div>
             <div><img src={upArrow} alt="logo"/></div>
             </div>
+            <span className={styles.TextBottom}>{props.affected}</span>
+            <span className={styles.TextBottomRight}>{props.recovered}</span>
     </div>
 
       )

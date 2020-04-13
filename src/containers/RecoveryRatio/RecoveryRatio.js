@@ -29,6 +29,13 @@ class RecoveryRatio extends Component{
     let affected=arr[0];
     let recovered=arr[1];
     let percent=((arr[1]/arr[0])*100).toFixed(1);
+    if(affected>999){
+        affected=((affected/1000).toFixed(1))+'k';
+    }
+
+    if(recovered>999){
+        recovered=((recovered/1000).toFixed(1))+'k';
+    }
 
         console.log(percent);
         return (<div className={styles.RecoveryRatio}><p>Ratio of Recovery</p>

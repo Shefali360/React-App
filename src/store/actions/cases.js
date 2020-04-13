@@ -11,12 +11,14 @@ return{
 
 export const fetchCases=()=>{
     return dispatch=>{
-    axios.get('https://corona.lmao.ninja/all')
+    // let interval=setInterval(()=>{
+        axios.get('https://corona.lmao.ninja/all')
     .then(response=>{
         dispatch(renderCases(response.data));
     })
     .then(error=>{
         console.log("sorry")
     })
-    }
+// },5000);
+}
 } 

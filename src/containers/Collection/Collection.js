@@ -10,7 +10,7 @@ import Aux from '../../hoc/Aux/Aux';
 
 class Collection extends Component {
   componentDidMount() {
-    this.props.onFetchCases()
+    this.props.onFetchCases();
   }
 
   render() {

@@ -48,7 +48,8 @@
 .CountryName{
     font-size:16px;
     font-weight:600;
-    padding-left:10px;
+    padding-left:8px;
+    display: inline-block;
 }
 
 

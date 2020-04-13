@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './CasesDiv.module.css';
 
 
 const CasesDiv=(props)=>{

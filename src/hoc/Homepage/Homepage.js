@@ -3,13 +3,12 @@ import Toolbar from "../../components/Toolbar/Toolbar";
 import Aux from '../Aux/Aux';
 import MainContainer from "../../components/MainContainer/MainContainer";
 
-const Layout=()=> {
+const Homepage=()=> {
     return (
       <Aux>
-        <Toolbar />
         <MainContainer/>
       </Aux>
     );
 }
 
-export default Layout;
+export default Homepage;

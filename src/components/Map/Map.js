@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Map.module.css';
 import zoomFeature from '../../images/map.png';
+import WorldMap from './WorldMap/WorldMap';
 const Map=(props)=>{
     return(
         <div className={styles.Map}>
@@ -10,8 +11,8 @@ const Map=(props)=>{
             <span className={styles.SecondIndicator}>Less Affected</span>
          </div>
          <div className={styles.MapArea}>
-             <i className="fa fa-search"></i>
-             <img className={styles.ZoomFeature}src={zoomFeature} alt="zoom feature"/>
+            <WorldMap/>
+             <button type="search"><i className="fa fa-search"></i></button>
          </div>
          </div>
             );

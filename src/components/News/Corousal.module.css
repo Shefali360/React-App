@@ -35,6 +35,7 @@
     border-radius: 50%;
     margin-right:15px;
 }
+
 .Heading{
     padding:10px;
     background-color:#ffeaeb;
@@ -63,6 +64,10 @@
 
 .Btn:after{
     content:"\f178";  
+}
+
+.DotContainer{
+    text-align: center;
 }
 
 .Dot {

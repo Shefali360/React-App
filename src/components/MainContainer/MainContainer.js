@@ -7,8 +7,7 @@ import styles from './MainContainer.module.css';
 import Search from '../../components/countrywiseCases/country/Search/Search';
 import Twitter from '../../components/Tweets/Tweets';
 import SpreadTrends from '../../containers/SpreadTrends/SpreadTrends';
-import SpreadGraph from '../SpreadGraph/SpreadGraph';
-import News from '../News/News';
+import Corousal from '../../components/News/Corousal';
 import Map from '../../components/Map/Map';
 
 const MainContainer=()=>{
@@ -31,7 +30,7 @@ return(
             <SpreadTrends/>
             </Col>
             <Col sm={6}>
-            <News/>
+            <Corousal/>
             </Col>
             </Row>
             </Col>
