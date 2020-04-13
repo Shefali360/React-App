@@ -5,7 +5,7 @@ import Aux from '../../../hoc/Aux/Aux';
 
 const NavbarItem=(props)=>{
     return(<Aux><li className={styles.NavbarList}>
-        <NavLink className={styles.NavbarEle} to={props.link} 
+        <NavLink className={styles.NavbarEle} to={props.link} exact={props.exact}
          activeClassName={styles.active}>{props.children}
         </NavLink></li></Aux>);
 }

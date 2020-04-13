@@ -12,6 +12,7 @@ const app=()=> {
   return (
     <div className={[styles.App,styles.Contain].join(' ')}>
         <Toolbar/>
+        <Route path="/" exact component={Homepage}/>
        <Switch>
               <Route path="/home" component={Homepage}/>
               <Route path="/faq" component={Faq}/>
