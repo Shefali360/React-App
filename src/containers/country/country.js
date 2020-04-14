@@ -12,7 +12,7 @@ class Country extends Component {
 
   render(){
      let countrydata=[];
-     if (this.props.countries.length!==0) {
+     if (this.props.countries.length) {
       let count = this.props.countries;
       console.log(count)
         countrydata = count.map((countries) => {

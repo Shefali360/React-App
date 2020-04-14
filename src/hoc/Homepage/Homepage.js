@@ -1,5 +1,4 @@
 import React from "react";
-import Toolbar from "../../components/Toolbar/Toolbar";
 import Aux from '../Aux/Aux';
 import MainContainer from "../../components/MainContainer/MainContainer";
 

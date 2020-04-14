@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import {connect} from 'react-redux';
 import SpreadGraph from '../../components/SpreadGraph/SpreadGraph';
 import styles from './SpreadTrends.module.css';
 

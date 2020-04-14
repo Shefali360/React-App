@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Map.module.css';
-import zoomFeature from '../../images/map.png';
 import WorldMap from './WorldMap/WorldMap';
 const Map=(props)=>{
     return(

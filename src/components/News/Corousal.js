@@ -16,7 +16,7 @@ const News=(props)=>{
             <div>
                 <span className={styles.Heading}>News & Updates</span>
                 <p className={styles.NewsHeading}>5 Symptoms of Corona Virus that you should know</p>
-                <Link className={styles.Btn}to="/news">Know More</Link>
+                <Link className={styles.Btn}to="/help">Know More</Link>
             </div>
         </div>
      
@@ -27,7 +27,7 @@ const News=(props)=>{
             <div>
                 <span className={styles.Heading}>News & Updates</span>
                 <p className={styles.NewsHeading}>Precautions to be taken to avoid corona virus.</p>
-                <Link className={styles.Btn}to="/news">Know More</Link>
+                <Link className={styles.Btn}to="/help">Know More</Link>
             </div>
         </div>
 
@@ -39,7 +39,7 @@ const News=(props)=>{
             <div>
                 <span className={styles.Heading}>News & Updates</span>
                 <p className={styles.NewsHeading}>Common myths about corona virus and it's prevention.</p>
-                <Link className={styles.Btn}to="/news">Know More</Link>
+                <Link className={styles.Btn}to="/help">Know More</Link>
             </div>
         </div>
        
