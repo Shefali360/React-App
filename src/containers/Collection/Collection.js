@@ -7,14 +7,24 @@ import Graphs from "../../components/CasesDiv/Graphs/Graphs";
 import styles from './Collection.module.css';
 import Label from '../../components/CasesDiv/Label/Label';
 import Aux from '../../hoc/Aux/Aux';
+import Spinner from '../../components/Spinner/Spinner';
 
 class Collection extends Component {
+  interval;
+
   componentDidMount() {
     this.props.onFetchCases();
+    this.interval=setInterval(()=>this.props.onFetchCases,5000);
+
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.interval);
+
   }
 
   render() {
-    let casesData = null;
+    let casesData=this.props.error?<p>Cases can't be loaded</p>:<Spinner/>;
     if (this.props.cases) {
     let data = [];
       let object = this.props.cases;
@@ -49,7 +59,8 @@ class Collection extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    cases: state.cases.coronaStats
+    cases: state.cases.coronaStats,
+    error:state.cases.error
   };
 };
 

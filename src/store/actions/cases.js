@@ -9,6 +9,12 @@ return{
 
 }
 
+export const fetchCasesFailed=()=>{
+    return{
+        type:actionTypes.FETCH_CASES_FAILED
+    }
+}
+
 export const fetchCases=()=>{
     return dispatch=>{
     // let interval=setInterval(()=>{
@@ -17,7 +23,7 @@ export const fetchCases=()=>{
         dispatch(renderCases(response.data));
     })
     .then(error=>{
-        console.log("sorry")
+        dispatch(fetchCasesFailed());
     })
 // },5000);
 }

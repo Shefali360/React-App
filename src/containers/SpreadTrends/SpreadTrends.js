@@ -13,6 +13,7 @@ class SpreadTrends extends Component{
                <SpreadGraph link="/home/recovered">Recovered</SpreadGraph>
                <SpreadGraph link="/home/deceased">Deceased</SpreadGraph>
            </ul>
+           
         </div>
         </div>);
     }

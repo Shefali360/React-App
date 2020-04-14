@@ -9,6 +9,12 @@ return{
 
 }
 
+export const fetchCountriesFailed=()=>{
+    return {
+        type:actionTypes.FETCH_COUNTRIES_FAILED
+    }
+}
+
 export const fetchCountries=()=>{
     return dispatch=>{
     axios.get('https://corona-virus-stats.herokuapp.com/api/v1/cases/countries-search')
@@ -16,7 +22,7 @@ export const fetchCountries=()=>{
         dispatch(renderCountries(response.data.data.rows));
     })
     .then(error=>{
-        console.log("sorry")
+        dispatch(fetchCountriesFailed());
     })
     }
 } 

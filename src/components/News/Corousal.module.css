@@ -1,11 +1,4 @@
-/* .SlideshowContainer{
-    position: relative;
-} */
 
-
-/* .Slides{
-    display: none;
-} */
 
 .News{
     display:flex;
@@ -16,7 +9,6 @@
     border-radius: 7px;
     text-align: left;
     margin-bottom: 25px;
-    /* position:absolute; */
 }
 .Image1{
     margin-right:15px;

@@ -4,24 +4,40 @@ import * as actions from "../../store/actions/index";
 import { connect } from "react-redux";
 import Aux from '../../hoc/Aux/Aux';
 import styles from './country.module.css';
+import Spinner from '../../components/Spinner/Spinner';
 
 class Country extends Component {
+  intervalId;
   componentDidMount() {
     this.props.onFetchCountries();
+    this.intervalId=setInterval(()=>this.props.onFetchCountries,5000);
   }
 
+  componentWillUnmount(){
+    clearInterval(this.intervalId);
+  }
   render(){
-     let countrydata=[];
-     if (this.props.countries.length) {
+     let countrydata=this.props.error?<p>Country data can't be loaded</p>:<Spinner/>;
+     if (this.props.countries.length!==0) {
       let count = this.props.countries;
       console.log(count)
         countrydata = count.map((countries) => {
+            let num=countries.new_cases.split(',').join('');
+            console.log(num);
+            let affect=countries.total_cases.split(',').join('');
+            if(affect>999){
+              affect=((affect/1000).toFixed(1))+'k';
+            }
+            let recover=countries.total_recovered.split(',').join('');
+            if(recover>999){
+              recover=((recover/1000).toFixed(1))+'k';
+            }
             return (
               <li key={countries.country} >
                 <CountrywiseCases class={styles.Country} flag={countries.flag} country={countries.country}
-                 affected={countries.total_cases} recovered={countries.total_recovered}/>
+                 affected={affect} recovered={recover} arrow={num}/>
+                 
               </li>
-            
             );
        });
   }
@@ -36,7 +52,8 @@ class Country extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    countries:state.countries.countries
+    countries:state.countries.countries,
+    error:state.countries.error
   };
 };
 
