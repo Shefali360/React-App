@@ -31,7 +31,7 @@ export const fetchCountries=()=>{
     .then(response=>{
         dispatch(renderCountries(response.data.data.rows));
     })
-    .then(error=>{
+    .catch(error=>{
         dispatch(fetchCountriesFailed());
     })
     }

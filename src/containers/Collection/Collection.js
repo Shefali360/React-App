@@ -66,7 +66,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onFetchCases: () => dispatch(actions.fetchCases())
+    onFetchCases: (error) => dispatch(actions.fetchCases(error))
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Collection);

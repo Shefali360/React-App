@@ -21,7 +21,7 @@ export const fetchCountriesOnSearch=(value,error)=>{
         .then(response=>{
             dispatch(searchCountries(response.data.data.rows[0]));
         })
-        .then(error=>{
+        .catch(error=>{
            dispatch(searchCountriesFailed(error));
         })
     }

@@ -27,6 +27,11 @@ class Search extends Component {
        
       }
     };
+  // deleteText=(event)=>{
+  //   if(event.keyCode===8){
+  //    return <Country/>;
+  //   }
+  // }
    
   render() {
     let searchedData=this.props.error?<p>Error occurred</p>:<Spinner/>;
@@ -36,6 +41,7 @@ class Search extends Component {
     if(this.props.countries){
      let countryData=this.props.countries;
       let searchdata=[];
+
       searchdata=Object.values(countryData);
       // console.log(searchdata[2]);
       // let num=searchdata.split(',').join('');
@@ -48,8 +54,8 @@ class Search extends Component {
       //         recover=((recover/1000).toFixed(1))+'k';
       //       }
       console.log(searchdata);
-      searchedData=(<div ><CountrywiseCases flag={searchdata[10]} country={searchdata[0]}
-        affected={searchdata[2]} recovered={searchdata[6]} /></div>)
+      searchedData=(<CountrywiseCases flag={searchdata[10]} country={searchdata[0]}
+        affected={searchdata[2]} recovered={searchdata[6]} />)
      }
     //  if(this.keyPress){
     //   return {searchdata}
@@ -60,25 +66,22 @@ class Search extends Component {
     if(this.inputChangedHandler){
     return (
       <Aux>
-        <SearchData value={this.state.value} changed={this.inputChangedHandler} keypressed={this.keyPress}/>
-        <div className={styles.Div}>
-          {searchedData}
-        </div>
+       <SearchData value={this.state.value} changed={this.inputChangedHandler} keypressed={this.keyPress} />
+        {this.props.countries['country']?searchedData:<Country/>}
+        
+       
       </Aux>
     )
   }
-  else{
-    return ( 
-    <Aux>
-      <SearchData value={this.state.value} changed={this.inputChangedHandler} keypressed={this.keyPress}/>
-      <div className={styles.Div}>
-        <Country/>
-      </div>
-    </Aux>);
-  }
+//   else{
+//     return ( 
+//     <Aux>
+//       <SearchData/>
+        
+//     </Aux>);
+//   }
 }
 }
-
 
 const mapStateToProps=(state)=>{
     console.log(state.search.countries);

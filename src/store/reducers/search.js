@@ -15,7 +15,7 @@ const searchCountries=(state,action)=>{
 }
 
 const searchCountriesFailed=(state,action)=>{
-    return updateObject(state,{error:action.error})
+    return updateObject(state,{error:true})
 }
 
 const reducer=(state=initialState,action)=>{
