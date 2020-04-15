@@ -52,5 +52,13 @@
     display: inline-block;
 }
 
+.Country{
+    background-color: #fff;
+    padding:10px 10px 10px 15px;
+    margin:8px;
+    border-radius: 8px;
+    box-shadow:1px 1px 8px 0.1px #ddd;
+    text-align:left;
+}
 
 

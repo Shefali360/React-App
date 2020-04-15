@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import Aux from '../../hoc/Aux/Aux';
 import styles from './country.module.css';
 import Spinner from '../../components/Spinner/Spinner';
+import Search from '../../components/countrywiseCases/country/Search/Search';
+import SearchData from '../../components/countrywiseCases/country/SearchedData/SearchedData';
 
 class Country extends Component {
   intervalId;
@@ -18,7 +20,7 @@ class Country extends Component {
   }
   render(){
      let countrydata=this.props.error?<p>Country data can't be loaded</p>:<Spinner/>;
-     if (this.props.countries.length!==0) {
+     if (this.props.countries.length!=0) {
       let count = this.props.countries;
       console.log(count)
         countrydata = count.map((countries) => {
@@ -33,19 +35,19 @@ class Country extends Component {
             }
             return (
               <li key={countries.country} >
-                <CountrywiseCases class={styles.Country} flag={countries.flag} country={countries.country}
+                <CountrywiseCases flag={countries.flag} country={countries.country}
                  affected={affect} recovered={recover} arrow={num}/>
-                 
               </li>
             );
        });
   }
  return (
-        <Aux>
+
+      <Aux>
       <ul className={styles.List}>
        {countrydata}
        </ul>
-        </Aux>
+      </Aux>
     );
 }
 }

@@ -8,12 +8,14 @@ import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import casesReducer from './store/reducers/cases';
 import countriesReducer from './store/reducers/countries';
+import searchReducer from './store/reducers/search';
 
 
 const composeEnhancers = process.env.NODE_ENV === 'development'?window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ :null|| compose;
 const rootReducer=combineReducers({
 cases:casesReducer,
-countries:countriesReducer
+countries:countriesReducer,
+search:searchReducer
 });
 const store=createStore(rootReducer,composeEnhancers(
   applyMiddleware(thunk)

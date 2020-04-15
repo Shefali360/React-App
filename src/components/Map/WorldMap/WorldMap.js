@@ -2,7 +2,7 @@ import React from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import highchartsMap from "highcharts/modules/map";
-import mapDataIE from "@highcharts/map-collection/custom/world-palestine-highres.geo.json";
+import mapData from "@highcharts/map-collection/custom/world-palestine-highres.geo.json";
 highchartsMap(Highcharts); 
 const mapOptions = {
     chart: {
@@ -26,7 +26,7 @@ const mapOptions = {
       {
         // Use the gb-all map with no data as a basemap
         name: "Countries",
-        mapData: mapDataIE,
+        mapData: mapData,
         borderColor: "#A0A0A0",
         nullColor: "rgba(200, 200, 200, 0.3)",
         showInLegend: false

@@ -22,7 +22,7 @@ return(
             </Col>
             <Col className={styles.CountrywiseCases}sm={4}>
             <Search/>
-            <Country/>
+            {/* <Country/> */}
             </Col>
             <Col sm={8}>
             <Map/>
