@@ -10,7 +10,7 @@ class Country extends Component {
   intervalId;
   componentDidMount() {
     this.props.onFetchCountries();
-    this.intervalId=setInterval(()=>this.props.onFetchCountries,5000);
+    this.intervalId=setInterval(()=>this.props.onFetchCountries,300000);
   }
 
   componentWillUnmount(){
@@ -23,7 +23,6 @@ class Country extends Component {
       console.log(count)
         countrydata = count.map((countries) => {
             let num=countries.new_cases.split(',').join('');
-            console.log(num);
             let affect=countries.total_cases.split(',').join('');
             if(affect>999){
               affect=((affect/1000).toFixed(1))+'k';
