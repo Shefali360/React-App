@@ -8,9 +8,9 @@ const initialState={
 
 const renderMap=(state,action)=>{
     let arr=[];
-    arr=state.map.concat(action.mapdata);
+    arr=action.mapdata;
    return updateObject(state,{
-       countries:arr
+       map:arr
    }) 
 
 }

@@ -9,7 +9,7 @@ return{
 
 }
 
-export const fetchCasesFailed=(error)=>{
+export const fetchCasesFailed=()=>{
     return{
         type:actionTypes.FETCH_CASES_FAILED
     }
@@ -23,7 +23,7 @@ export const fetchCases=()=>{
         dispatch(renderCases(response.data));
     })
     .catch(error=>{
-        dispatch(fetchCasesFailed(error));
+        dispatch(fetchCasesFailed());
     })
 // },5000);
 }

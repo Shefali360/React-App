@@ -27,7 +27,7 @@ export const fetchCountriesFailed=()=>{
 
 export const fetchCountries=()=>{
     return dispatch=>{
-    axios.get('https://corona-virus-stats.herokuapp.com/api/v1/cases/countries-search')
+    axios.get('https://corona-virus-stats.herokuapp.com/api/v1/cases/countries-search?limit=100')
     .then(response=>{
         dispatch(renderCountries(response.data.data.rows));
     })

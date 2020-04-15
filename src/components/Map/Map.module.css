@@ -65,4 +65,11 @@
     box-shadow:1px 1px 8px 0.1px #ddd;
 }
 
+.ZoomFeature{
+    position: absolute;
+    left:0;
+    top:0;
+    transform: translate(1950%,25%);
+
+}
 

@@ -11,12 +11,12 @@ return{
 
 export const fetchMapData=()=>{
     return dispatch=>{
-    axios.get('https://www.trackcorona.live/api/countries/')
+    axios.get('https://corona-virus-stats.herokuapp.com/api/v1/cases/countries-search?limit=200')
     .then(response=>{
-        dispatch(renderMap(response.data.data));
+        dispatch(renderMap(response.data.data.rows));
     })
-    .then(error=>{
-        console.log("sorry")
+    .catch(error=>{
+        console.log("error");
     })
     }
 } 

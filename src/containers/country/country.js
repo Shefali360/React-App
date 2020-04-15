@@ -20,7 +20,7 @@ class Country extends Component {
   }
   render(){
      let countrydata=this.props.error?<p>Country data can't be loaded</p>:<Spinner/>;
-     if (this.props.countries.length!=0) {
+     if (this.props.countries.length!==0) {
       let count = this.props.countries;
       console.log(count)
         countrydata = count.map((countries) => {

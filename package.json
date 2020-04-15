@@ -19,6 +19,7 @@
     "react-chartjs-2": "^2.9.0",
     "react-circular-progressbar": "^2.0.3",
     "react-dom": "^16.13.1",
+    "react-google-charts": "^3.0.15",
     "react-highcharts": "^16.1.0",
     "react-math": "0.0.1",
     "react-redux": "^7.2.0",

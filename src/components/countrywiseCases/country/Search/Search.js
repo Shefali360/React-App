@@ -35,44 +35,30 @@ class Search extends Component {
    
   render() {
     let searchedData=this.props.error?<p>Error occurred</p>:<Spinner/>;
-    if(!this.props.countries){
-     searchedData=<p> Country does not exist or check spelling.</p>
+    if(!this.props.countries && this.state.value){
+      return (<Aux><SearchData value={this.state.value} changed={this.inputChangedHandler} keypressed={this.keyPress} />
+        <p>Please enter a valid country name or check spelling. </p>
+        <Country/></Aux>)
     }
     if(this.props.countries){
      let countryData=this.props.countries;
       let searchdata=[];
 
       searchdata=Object.values(countryData);
-      // console.log(searchdata[2]);
-      // let num=searchdata.split(',').join('');
-      //       let affect=search.split(',').join('');
-      //       if(affect>999){
-      //         affect=((affect/1000).toFixed(1))+'k';
-      //       }
-      // let recover=countries.total_recovered.split(',').join('');
-      //       if(recover>999){
-      //         recover=((recover/1000).toFixed(1))+'k';
-      //       }
       console.log(searchdata);
-      searchedData=(<CountrywiseCases flag={searchdata[10]} country={searchdata[0]}
-        affected={searchdata[2]} recovered={searchdata[6]} />)
+      searchedData=(<div className={styles.Div}><CountrywiseCases flag={searchdata[10]} country={searchdata[0]}
+        affected={searchdata[2]} recovered={searchdata[6]} /></div>)
      }
-    //  if(this.keyPress){
-    //   return {searchdata}
-    // }
-    // else
-    // return<Country/>
-     
-    if(this.inputChangedHandler){
     return (
       <Aux>
        <SearchData value={this.state.value} changed={this.inputChangedHandler} keypressed={this.keyPress} />
-        {this.props.countries['country']?searchedData:<Country/>}
+        {(this.props.countries && this.state.value)?searchedData:''}
+        <Country/>
         
        
       </Aux>
     )
-  }
+
 //   else{
 //     return ( 
 //     <Aux>
