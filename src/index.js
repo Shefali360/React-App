@@ -10,6 +10,7 @@ import casesReducer from './store/reducers/cases';
 import countriesReducer from './store/reducers/countries';
 import searchReducer from './store/reducers/search';
 import mapReducer from './store/reducers/map';
+import chartsReducer from './store/reducers/charts';
 
 
 const composeEnhancers = process.env.NODE_ENV === 'development'?window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ :null|| compose;
@@ -17,7 +18,8 @@ const rootReducer=combineReducers({
 cases:casesReducer,
 countries:countriesReducer,
 search:searchReducer,
-map:mapReducer
+map:mapReducer,
+charts:chartsReducer
 });
 const store=createStore(rootReducer,composeEnhancers(
   applyMiddleware(thunk)

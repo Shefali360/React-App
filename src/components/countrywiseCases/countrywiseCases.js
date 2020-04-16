@@ -2,7 +2,6 @@ import React from "react";
 import styles from './countrywiseCases.module.css';
 import upArrow from '../../images/up.png';
 import downArrow from '../../images/down.png';
-import Search from '../../components/countrywiseCases/country/Search/Search';
 
 const CountrywiseCases = (props) => {
   return (

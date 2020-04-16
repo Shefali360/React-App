@@ -17,13 +17,6 @@ export const fetchCountriesFailed=()=>{
 }
 
 
-// export const searchCountries=(searchdata)=>{
-//     return{
-//         type:actionTypes.SEARCH_COUNTRIES,
-//          searchdata:searchdata
-//         }
-// }
-
 
 export const fetchCountries=()=>{
     return dispatch=>{
@@ -37,14 +30,3 @@ export const fetchCountries=()=>{
     }
 } 
 
-// export const fetchCountriesOnSearch=(value)=>{
-//     return dispatch=>{
-//         axios.get(`https://corona-virus-stats.herokuapp.com/api/v1/cases/countries-search?search=${value}`)
-//         .then(response=>{
-//             dispatch(searchCountries(response.data.data.rows[0]));
-//         })
-//         .then(error=>{
-//             console.log("error");
-//         })
-//     }
-// }

@@ -5,8 +5,6 @@ import { connect } from "react-redux";
 import Aux from '../../hoc/Aux/Aux';
 import styles from './country.module.css';
 import Spinner from '../../components/Spinner/Spinner';
-import Search from '../../components/countrywiseCases/country/Search/Search';
-import SearchData from '../../components/countrywiseCases/country/SearchedData/SearchedData';
 
 class Country extends Component {
   intervalId;
