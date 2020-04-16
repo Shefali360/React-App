@@ -10,13 +10,11 @@ return{
 }
 
 export const fetchNews=()=>{
-    var url = 'http://newsapi.org/v2/top-headlines?' +
-          'country=us&' +
-          'apiKey=fe65fa7f714044a190b92aa5808223ef';
+    let url='https://newsapi.org/v2/top-headlines?q=corona+virus&sources=google-news,bbc-news,business-insider&apiKey=fe65fa7f714044a190b92aa5808223ef';
     return dispatch=>{
     axios.get(url)
     .then(response=>{
-        dispatch(renderNews(response.data.data.rows));
+        dispatch(renderNews(response.data.articles));
     })
     .then(error=>{
         console.log("sorry")

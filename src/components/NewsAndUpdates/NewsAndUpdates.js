@@ -6,27 +6,23 @@ import mythImg from '../../images/myth.jpeg';
 import styles from './NewsAndUpdates.module.css';
 import {Link} from 'react-router-dom';
 
-const news = [
-    "5 Symptoms of Corona Virus that you should know.",
-    "Precautions to be taken to avoid corona virus.",
-    "Common myths about corona virus and it's prevention."
-]
+
 const array = [<Corousal imageStyle={styles.Image1} image={symptomsImg} alt="symptoms illustration"
         heading="News and Updates"
-        news={news[0]}
-        route="/help"
+        news="Click to get latest news..."
+        route="/news"
         buttonText="Read More"
     />,
     <Corousal imageStyle={styles.Image2} image={precautionsImg} alt="precautions illustration"
         heading="News and Updates"
-        news={news[1]}
-        route="/help"
+        news="Click to get latest news..."
+        route="/news"
         buttonText="Read More"
     />,
     <Corousal imageStyle={styles.Image3} image={mythImg} alt="myth illustration"
         heading="News and Updates"
-        news={news[2]}
-        route="/help"
+        news="Click to get latest news..."
+        route="/news"
         buttonText="Read More"
     />
 ];
@@ -49,12 +45,13 @@ class NewsAndUpdates extends Component {
         });
     }
 
+
     componentDidMount() {
         this.startRolling();
     }
 
     componentWillUnmount() {
-        clearInterval(this.state.handle);
+        clearInterval(this.intervalId);
     }
 
     stopRolling=()=> {
@@ -82,5 +79,7 @@ class NewsAndUpdates extends Component {
         );
     }
 }
+
+
 
 export default NewsAndUpdates;

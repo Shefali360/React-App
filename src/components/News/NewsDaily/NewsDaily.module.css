@@ -1,0 +1,12 @@
+.OuterDiv p{
+    text-align: left;
+}
+
+.OuterDiv img{
+    width:300px;
+    height:250px;
+}
+
+.OuterDiv{
+    padding:40px;
+}

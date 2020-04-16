@@ -11,6 +11,9 @@
     
 }
 
+.Graph p{
+    text-align: left;
+}
 .ToggleButtons:hover,
 .Active{
     background-color: #52586a;

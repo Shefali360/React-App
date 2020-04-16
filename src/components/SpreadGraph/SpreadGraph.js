@@ -90,7 +90,7 @@ class SpreadGraph extends Component {
           </div>
           <div className={styles.GraphDiv}>
             <div className={styles.Graph}>
-              <span className={styles.Type}>{upper}</span>
+              <p className={styles.Type}>{upper}</p>
               <p className={styles.Type}>{now}</p>
               <p className={styles.Num}>
                 {num}

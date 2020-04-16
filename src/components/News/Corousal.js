@@ -11,7 +11,7 @@ const News = (props) => {
                     <img className={props.imageStyle} src={props.image} alt={props.alt} />
                 </div>
                 <div>
-                    <span className={styles.Heading}>{props.heading}</span>
+                    <Link className={styles.Heading} to={props.route}>{props.heading}</Link>
                     <p className={styles.NewsHeading}>{props.news}</p>
                     <Link className={styles.Btn} to={props.route}>{ props.buttonText}</Link>
                 </div>

@@ -5,12 +5,10 @@ import RecoveryRatio from '../../containers/RecoveryRatio/RecoveryRatio';
 import styles from './MainContainer.module.css';
 import Search from '../../components/countrywiseCases/country/Search/Search';
 import Twitter from '../../components/Tweets/Tweets';
-import SpreadTrends from '../../containers/SpreadTrends/SpreadTrends';
 import NewsAndUpdates from '../../components/NewsAndUpdates/NewsAndUpdates';
 import Map from '../../components/Map/Map';
-import Charts from '../../components/SpreadGraph/Chart/Chart';
 import SpreadGraph from '../SpreadGraph/SpreadGraph';
-// import Chart from '../../components/SpreadGraph/Chart/Chart';
+
 
 const MainContainer=()=>{
 return(
