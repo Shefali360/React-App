@@ -1,31 +1,14 @@
 
-
 .News{
     display:flex;
     background-color: #ffffff;
     margin-right: 15px;
     box-sizing: border-box;
-    padding:18px;
+    padding:23px;
     border-radius: 7px;
     text-align: left;
     margin-bottom: 25px;
-}
-.Image1{
-    margin-right:15px;
-
-}
-
-.Image2{
-    height:160px;
-    width:160px;
-    border-radius: 50%;
-    margin-right:15px;
-}
-.Image3{
-    height:160px;
-    width:160px;
-    border-radius: 50%;
-    margin-right:15px;
+    max-height:200px;
 }
 
 .Heading{
@@ -44,6 +27,7 @@
     margin-top:20px;
     color:#30313a;
     line-height:1.7rem;
+    max-height:100px;
 }
 
 .Btn{
@@ -66,7 +50,7 @@
 .Dot {
     height: 10px;
     width: 10px;
-    margin: 0 5px;
+    /* margin: 0 5px; */
     background-color: #f6e1e2;
     border-radius: 50%;
     display: inline-block;

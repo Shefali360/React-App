@@ -8,6 +8,11 @@ return{
 }
 
 }
+export const fetchNewsFailed=()=>{
+    return {
+        type:actionTypes.FETCH_NEWS_FAILED
+    }
+}
 
 export const fetchNews=()=>{
     let url='https://newsapi.org/v2/top-headlines?q=corona+virus&sources=google-news,bbc-news,business-insider&apiKey=fe65fa7f714044a190b92aa5808223ef';
@@ -16,8 +21,7 @@ export const fetchNews=()=>{
     .then(response=>{
         dispatch(renderNews(response.data.articles));
     })
-    .then(error=>{
-        console.log("sorry")
+    .then(error=>{dispatch(fetchNewsFailed())
     })
     }
 } 

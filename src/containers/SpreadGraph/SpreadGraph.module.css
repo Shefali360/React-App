@@ -7,8 +7,7 @@
     padding:8px;
     border-radius: 7px;
     outline:0;
-    border:none;
-    
+    border:none;  
 }
 
 .Graph p{
@@ -24,6 +23,7 @@
     border-radius: 7px;
     margin-right:15px;
     padding-left:10px;
+    max-height:310px;
 }
 .Box{
     display:flex;
@@ -58,9 +58,9 @@
 }
 
 
-/* .GraphDiv{
-    position: relative;
-} */
+.GraphDiv{
+   min-height:210px;
+}
 
 .Graph{
     position: absolute;

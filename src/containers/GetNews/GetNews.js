@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../../store/actions/index';
-import News from '../NewsDaily/Newsdaily';
-import Aux from '../../../hoc/Aux/Aux';
+import * as actions from '../../store/actions/index';
+import News from '../../components/News/NewsDaily/Newsdaily';
+import Aux from '../../hoc/Aux/Aux';
+import Spinner from '../../components/Spinner/Spinner';
 
 class GetNews extends Component{
 intervalId;
@@ -15,7 +16,7 @@ intervalId;
         clearInterval(this.intervalId)
     }
     render(){
-        let news=null;
+        let news=this.props.error?<p>News can't be loaded.</p>:<Spinner/>;
         if(this.props.news){
             let array=this.props.news;
           news=array.map(news=>{
@@ -36,7 +37,8 @@ intervalId;
 
 const mapStateToProps=state=>{
     return{
-        news:state.news.news
+        news:state.news.news,
+        error:state.news.error
     }
 }
 

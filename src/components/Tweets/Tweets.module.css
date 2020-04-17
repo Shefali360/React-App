@@ -2,6 +2,11 @@
     background-color: #ffffff;
     border-radius: 7px;
     padding:15px;
+    max-height:540px;
+}
+
+.Timeline{
+    max-height:400px;
 }
 
 .TwitterIcon{

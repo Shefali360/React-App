@@ -14,7 +14,7 @@ class Collection extends Component {
 
   componentDidMount() {
     this.props.onFetchCases();
-    this.interval=setInterval(()=>this.props.onFetchCases,5000);
+    this.interval=setInterval(()=>this.props.onFetchCases,300000);
 
   }
 
@@ -33,7 +33,6 @@ class Collection extends Component {
         newObj[key] = object[key];
         data.push(newObj);
       }
-      console.log(data);
       casesData = data.map((cases) => {
         for (let value in cases) {
           return (

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import styles from "./Search.module.css";
-import Aux from "../../../../hoc/Aux/Aux";
+import Aux from '../../hoc/Aux/Aux';
 import {connect} from 'react-redux';
-import * as actions from "../../../../store/actions/index";
-import CountrywiseCases from "../../countrywiseCases";
-import Spinner from '../../../../components/Spinner/Spinner';
-import SearchData from '../SearchedData/SearchedData';
-import Country from '../../../../containers/country/country';
+import * as actions from "../../store/actions/index";
+import CountrywiseCases from "../../components/countrywiseCases/countrywiseCases";
+import Spinner from '../../components/Spinner/Spinner';
+import SearchData from '../../components/countrywiseCases/SearchedData/SearchedData';
+import Country from '../../containers/country/country';
 
 
 class Search extends Component {
@@ -27,11 +27,6 @@ class Search extends Component {
        
       }
     };
-  // deleteText=(event)=>{
-  //   if(event.keyCode===8){
-  //    return <Country/>;
-  //   }
-  // }
    
   render() {
     let searchedData=this.props.error?<p>Error occurred</p>:<Spinner/>;
@@ -45,7 +40,6 @@ class Search extends Component {
       let searchdata=[];
 
       searchdata=Object.values(countryData);
-      console.log(searchdata);
       searchedData=(<div className={styles.Div}><CountrywiseCases flag={searchdata[10]} country={searchdata[0]}
         affected={searchdata[2]} recovered={searchdata[6]} /></div>)
      }
@@ -58,19 +52,10 @@ class Search extends Component {
        
       </Aux>
     )
-
-//   else{
-//     return ( 
-//     <Aux>
-//       <SearchData/>
-        
-//     </Aux>);
-//   }
 }
 }
 
 const mapStateToProps=(state)=>{
-    console.log(state.search.countries);
     return{
         countries:state.search.countries,
         error:state.search.error

@@ -8,7 +8,6 @@ const Graphs=(props)=>{
 let graph=null;
 switch(props.label){
     case "totalCases":graph=(<img src={totalCasesGraph} alt="total cases graph"/>)
-    console.log(totalCasesGraph);
     break;
     case "recovered":graph=(<img src={recoveredGraph} alt="recovered cases graph"/>);
     break;

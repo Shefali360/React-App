@@ -23,8 +23,6 @@ render(){
      }
     if(this.props.map.length!==0){
         let mapgeo=this.props.map;
-        // mapgeo=mapgeo.shift();
-        console.log(mapgeo);
         mapgeo.forEach((mapped)=>{
             let num=mapped.total_cases.split(',').join('');
             let finalvar=parseInt(num);
@@ -37,12 +35,9 @@ render(){
         })
         finalarray.shift();
         finalarray.unshift(["Country","Cases"]);
-        console.log(finalarray);
     }
 return(
     <Chart
-  width={'550px'}
-  height={'380px'}
   chartType="GeoChart"
   data={finalarray}
   options={optionArray}

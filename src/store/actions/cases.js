@@ -18,7 +18,7 @@ export const fetchCasesFailed=()=>{
 export const fetchCases=()=>{
     return dispatch=>{
     // let interval=setInterval(()=>{
-        axios.get('https://corona.lmao.ninja/all')
+        axios.get('https://corona.lmao.ninja/v2/all')
     .then(response=>{
         dispatch(renderCases(response.data));
     })

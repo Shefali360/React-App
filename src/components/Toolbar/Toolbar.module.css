@@ -4,10 +4,39 @@
     background-color: #fff;
 }
 
+
+.Logo{
+    height:100%;
+    display: flex;
+    margin-top:10px;
+    margin-left:30px;
+}
 .Sitetag{
     font-size:22px;
     font-weight: bold;
     color:#ff3b40;
-    padding-top:20px;
+    padding-top:15px;
+}
+
+
+@media(max-width:1000px){
+    .Toolbar{
+        display: block;
+    }
+
+    .Logo{
+        margin-left:320px;
+    }
+   }
+
+
+
+@media(max-width:499px){
+ .Toolbar{
+     display: block;
+ }
+ .Logo{
+    margin-left:100px;
+}
 }
 

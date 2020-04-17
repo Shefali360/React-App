@@ -4,6 +4,25 @@
     font-weight: bold; 
     margin-left:300px;
     padding:0;
+    height:100%;
 }
+
+
+
+@media(max-width:1000px){
+    .Navbar{
+        margin-left:250px;
+    }
+  
+   }
+
+@media(max-width:499px){
+    .Navbar{
+        margin-left:50px;
+    }
+
+}
+
+
 
 

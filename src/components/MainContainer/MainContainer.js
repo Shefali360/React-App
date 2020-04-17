@@ -3,20 +3,20 @@ import { Container, Row, Col } from "react-bootstrap";
 import Collection from '../../containers/Collection/Collection';
 import RecoveryRatio from '../../containers/RecoveryRatio/RecoveryRatio';
 import styles from './MainContainer.module.css';
-import Search from '../../components/countrywiseCases/country/Search/Search';
+import Search from '../../containers/Search/Search';
 import Twitter from '../../components/Tweets/Tweets';
 import NewsAndUpdates from '../../components/NewsAndUpdates/NewsAndUpdates';
 import Map from '../../components/Map/Map';
-import SpreadGraph from '../SpreadGraph/SpreadGraph';
+import SpreadGraph from '../../containers/SpreadGraph/SpreadGraph';
 
 
 const MainContainer=()=>{
 return(
-    <Container fluid>
+    <Container fluid >
         <Row noGutters={true}>
-            <Col md={9}>
+            <Col sm={12} md={9} >
             <Row noGutters={true}>
-            <Col md={12}>
+            <Col sm={12} md={12}>
             <Collection/>
             </Col>
             <Col className={styles.CountrywiseCases}sm={4}>

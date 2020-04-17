@@ -14,7 +14,7 @@ import chartsReducer from './store/reducers/charts';
 import newsReducer from './store/reducers/news';
 
 
-const composeEnhancers = process.env.NODE_ENV === 'development'?window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ :null|| compose;
+const composeEnhancers = (process.env.NODE_ENV === 'development'?window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ :null)|| compose;
 const rootReducer=combineReducers({
 cases:casesReducer,
 countries:countriesReducer,

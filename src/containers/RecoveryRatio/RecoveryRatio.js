@@ -20,7 +20,6 @@ class RecoveryRatio extends Component{
         for(let value in items){
             if(value==="totalCases"||value==="recovered")
                { arr.push(items[value]);
-                console.log(arr);
                 
                }      
         }
@@ -37,11 +36,11 @@ class RecoveryRatio extends Component{
         recovered=((recovered/1000).toFixed(1))+'k';
     }
 
-        console.log(percent);
         return (<div className={styles.RecoveryRatio}><p>Ratio of Recovery</p>
         <CircularProgressbar className={styles.Progress}value={percent} text={`${percent}%`} 
         styles={buildStyles({
             textSize:'14px',
+            textAlign:`center`,
             pathColor: `#06ba90`,
             trailColor: `#686c8526`,
         })}

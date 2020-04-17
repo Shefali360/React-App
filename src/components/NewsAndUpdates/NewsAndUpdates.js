@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import Corousal from '../News/Corousal';
-import symptomsImg from '../../images/symptoms.png';
-import precautionsImg from '../../images/precautions.jpeg';
-import mythImg from '../../images/myth.jpeg';
+import coronaImg from '../../images/coronaim.jpeg';
+import videoImg from '../../images/videosim.png';
+import donateImg from '../../images/donate.png';
 import styles from './NewsAndUpdates.module.css';
 import {Link} from 'react-router-dom';
 
 
-const array = [<Corousal imageStyle={styles.Image1} image={symptomsImg} alt="symptoms illustration"
+const array = [<Corousal imageStyle={styles.Image1} image={coronaImg} alt="symptoms illustration"
         heading="News and Updates"
-        news="Click to get latest news..."
+        news="Click to get the most trending news of COVID-19..."
         route="/news"
         buttonText="Read More"
     />,
-    <Corousal imageStyle={styles.Image2} image={precautionsImg} alt="precautions illustration"
+    <Corousal imageStyle={styles.Image2} image={videoImg} alt="precautions illustration"
         heading="News and Updates"
-        news="Click to get latest news..."
-        route="/news"
+        news="Click to watch videos regarding COVID-19..."
+        route="/videos"
         buttonText="Read More"
     />,
-    <Corousal imageStyle={styles.Image3} image={mythImg} alt="myth illustration"
+    <Corousal imageStyle={styles.Image3} image={donateImg} alt="myth illustration"
         heading="News and Updates"
-        news="Click to get latest news..."
-        route="/news"
+        news="Click to donate for needy..."
+        route="/help"
         buttonText="Read More"
     />
 ];
