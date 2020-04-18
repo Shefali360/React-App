@@ -19,24 +19,23 @@
 }
 
 
-@media(max-width:1000px){
+@media(min-width:768px)and (max-width:1023px){
     .Toolbar{
         display: block;
     }
 
     .Logo{
-        margin-left:320px;
+        margin-left:300px;
     }
    }
 
-
-
-@media(max-width:499px){
+@media(max-width:767px){
  .Toolbar{
      display: block;
+     width:100%
  }
  .Logo{
-    margin-left:100px;
+    margin:10px 0px 0px 100px;
 }
 }
 

@@ -27,6 +27,7 @@
     border-radius: 7px;
     text-align: left;
     margin-bottom: 25px;
+
 }
 
 .DotContainer {
@@ -50,4 +51,55 @@
     height: 13px;
     width: 13px;
     background-color: #ff0019;
+}
+
+@media(min-width:768px)and (max-width:991px){
+    .carousel{
+        min-height:310px;
+        
+    }
+    .Image1 {
+       
+        height: 120px;
+        width: 120px;
+        
+    }
+    
+    .Image2 {
+        height: 120px;
+        width: 120px;
+       
+    }
+    
+    .Image3 {
+        height: 120px;
+        width: 120px;
+       
+    }
+}
+
+@media(max-width:767px){
+    .carousel {
+        margin:0px;
+    }
+
+    .Image1 {
+       
+        height: 100px;
+        width: 100px;
+        
+    }
+    
+    .Image2 {
+        height: 100px;
+        width: 100px;
+       
+    }
+    
+    .Image3 {
+        height: 100px;
+        width: 100px;
+       
+    }
+ 
 }

@@ -6,7 +6,6 @@ import downArrow from '../../images/down.png';
 const CountrywiseCases = (props) => {
   return (
     <div className={styles.Country}>
-
           <div className={styles.Div}>
             <div>
            <img className={styles.Img}src={props.flag} alt="country-flag"/>

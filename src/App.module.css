@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding:0;
+  
 }
 
 .App {
@@ -8,14 +9,14 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   background-color:#eee;
+  width:100%;
+  
 }
-
 .Contain{
   width:100%;
-  max-width:1600px;
   margin:0 auto;
+  max-width: 1800px;
 }
-
 .CircularProgressbar-path{
   stroke: rgb(6, 186, 144);
   stroke-dasharray: 289.027px, 289.027px;

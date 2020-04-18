@@ -5,3 +5,10 @@
     margin-bottom:10px;
 }
 
+@media(max-width:767px){
+    .CountrywiseCases{
+        margin-bottom:0px;
+ 
+     }
+
+}

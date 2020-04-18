@@ -9,8 +9,10 @@ import News from './containers/GetNews/GetNews';
 import styles from './App.module.css';
 import Help from './components/Help/Help';
 
+
 const app=()=> {
   return (
+    
     <div className={[styles.App,styles.Contain].join(' ')}>
         <Toolbar/>
         <Route path="/" exact component={Homepage}/>
@@ -23,6 +25,7 @@ const app=()=> {
         </Switch>
      
     </div>
+  
   );
 }
 

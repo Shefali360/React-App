@@ -5,18 +5,17 @@
     margin-left:300px;
     padding:0;
     height:100%;
+    outline:0;
 }
 
+@media (min-width:768px)and(max-width:1023px){
 
-
-@media(max-width:1000px){
     .Navbar{
-        margin-left:250px;
+        margin-left:200px;
     }
-  
-   }
 
-@media(max-width:499px){
+}
+@media(max-width:767px){
     .Navbar{
         margin-left:50px;
     }

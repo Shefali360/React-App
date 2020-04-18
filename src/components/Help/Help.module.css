@@ -112,3 +112,36 @@
 text-decoration: none;
 color:#ff0019;
 }
+
+@media(min-width:768px)and(max-width:1023px){
+.Div a{
+    font-size:13px;
+}
+}
+
+@media(max-width:767px){
+    .Head{
+        font-size:20px;
+    }
+
+    .Div a{
+        
+        font-size:12px;
+        
+    }
+    .DivDonate h3{
+        font-size:20px;
+       
+    }
+    .DivDonate ul{
+        display: block;
+    }
+    .DivDonate li{
+        margin-bottom:20px;
+        text-align: center;
+    }
+    .WHO h3 a{
+        font-size:20px;
+        
+    }
+}

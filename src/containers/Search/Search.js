@@ -18,11 +18,9 @@ class Search extends Component {
     this.setState({
       value: event.target.value,
     });
-    console.log(this.state.value);
   };
   keyPress=(event)=>{
       if(event.keyCode===13){
-        console.log(this.state.value);
         this.props.onSearchCountries(event.target.value,"Error occured");
        
       }
@@ -31,14 +29,14 @@ class Search extends Component {
   render() {
     let searchedData=this.props.error?<p>Error occurred</p>:<Spinner/>;
     if(!this.props.countries && this.state.value){
-      return (<Aux><SearchData value={this.state.value} changed={this.inputChangedHandler} keypressed={this.keyPress} />
+      return (<Aux>
+        <SearchData value={this.state.value} changed={this.inputChangedHandler} keypressed={this.keyPress} />
         <p>Please enter a valid country name or check spelling. </p>
-        <Country/></Aux>)
+       </Aux>)
     }
     if(this.props.countries){
      let countryData=this.props.countries;
       let searchdata=[];
-
       searchdata=Object.values(countryData);
       searchedData=(<div className={styles.Div}><CountrywiseCases flag={searchdata[10]} country={searchdata[0]}
         affected={searchdata[2]} recovered={searchdata[6]} /></div>)
@@ -48,8 +46,6 @@ class Search extends Component {
        <SearchData value={this.state.value} changed={this.inputChangedHandler} keypressed={this.keyPress} />
         {(this.props.countries && this.state.value)?searchedData:''}
         <Country/>
-        
-       
       </Aux>
     )
 }

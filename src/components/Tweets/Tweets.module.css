@@ -2,11 +2,11 @@
     background-color: #ffffff;
     border-radius: 7px;
     padding:15px;
-    max-height:540px;
+    min-height:520px;
 }
 
 .Timeline{
-    max-height:400px;
+    min-height:400px;
 }
 
 .TwitterIcon{
@@ -17,4 +17,16 @@
     font-size:18px;
     font-weight: bold;
    
+}
+
+@media(min-width:768px)and ( max-width:1023px){
+    .Twitter{
+       margin-bottom: 10px;
+    }
+}
+
+@media(max-width:767px){
+    .Twitter{
+        margin-bottom: 20px;
+    }
 }

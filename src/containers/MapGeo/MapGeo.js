@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import {Chart} from 'react-google-charts';
 import {connect} from 'react-redux';
 import * as actions from '../../store/actions/index';
+import styles from './MapGeo.module.css';
 
 class MapGeo extends Component{
     intervalId;
@@ -41,6 +42,7 @@ return(
   chartType="GeoChart"
   data={finalarray}
   options={optionArray}
+  loader={<div className={styles.Loader}>Loading the map...</div>}
   mapsApiKey='AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
   rootProps={{ 'data-testid': '1' }}
 />

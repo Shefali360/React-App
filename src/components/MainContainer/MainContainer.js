@@ -12,33 +12,33 @@ import SpreadGraph from '../../containers/SpreadGraph/SpreadGraph';
 
 const MainContainer=()=>{
 return(
-    <Container fluid >
+    <Container fluid>
         <Row noGutters={true}>
-            <Col sm={12} md={9} >
+            <Col md={12} lg={9} >
             <Row noGutters={true}>
-            <Col sm={12} md={12}>
+            <Col md={12}lg={12} >
             <Collection/>
             </Col>
-            <Col className={styles.CountrywiseCases}sm={4}>
+            <Col className={styles.CountrywiseCases}md={12}lg={4}>
             <Search/>
             </Col>
-            <Col sm={8}>
+            <Col md={12}lg={8}>
             <Map/>
             </Col>
-            <Col sm={6}>
+            <Col md={6}lg={6}>
             <SpreadGraph/>
             </Col>
-            <Col sm={6}>
+            <Col md={6}lg={6}>
             <NewsAndUpdates/>
             </Col>
             </Row>
             </Col>
-            <Col md={3}>
+            <Col  md={12}lg={3}>
             <Row noGutters={true}>
-            <Col md={12}>
+            <Col md={6}lg={12}>
             <RecoveryRatio/>
             </Col>
-            <Col md={12}>
+            <Col md={6}lg={12}>
                 <Twitter/>
             </Col>
             </Row>

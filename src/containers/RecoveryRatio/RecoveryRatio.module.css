@@ -4,6 +4,7 @@
         border-radius: 7px;
         padding:20px 0px;
         font-weight: bold;
+        min-height:300px;
     }
 .StatsAffected{
     font-size:14px;
@@ -34,4 +35,23 @@
     height:200px;
     width:200px;
     margin:20px 0px;
+}
+
+@media(min-width:768px)and(max-width:1023px){
+    .RecoveryRatio{
+       margin:0;
+       margin-right:15px;
+       min-height:550px;
+       padding-top:80px;
+       
+    }
+
+    .RecoveryRatio p{
+        font-size:27px;
+    }
+    .Progress{
+        height:300px;
+        width:300px;
+        margin:20px 0px;
+    }
 }

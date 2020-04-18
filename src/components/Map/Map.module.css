@@ -74,9 +74,13 @@
     transform: translate(-40%,20%);
 
 }
+@media(min-width:768px)and(max-width:991px){
+    .Map{
+        margin:10px;
+    }
+}
 
-
-@media(max-width:499px){
+@media(max-width:767px){
     .Map{
         margin:10px;
     }

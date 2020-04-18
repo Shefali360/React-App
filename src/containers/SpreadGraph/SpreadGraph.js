@@ -102,7 +102,7 @@ class SpreadGraph extends Component {
       );
     }
     if(!this.props.chartdata.confirmed){
-      return (<></>);
+      return (<p>Error occurred!</p>);
     }
   }
 }

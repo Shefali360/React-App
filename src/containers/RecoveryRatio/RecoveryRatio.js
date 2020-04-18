@@ -44,7 +44,8 @@ class RecoveryRatio extends Component{
             pathColor: `#06ba90`,
             trailColor: `#686c8526`,
         })}
-            /><span className={styles.StatsAffected}>{affected.toLocaleString()}</span><span className={styles.StatsRecovered}>{recovered.toLocaleString()}</span>
+            />
+        <p><span className={styles.StatsAffected}>{affected.toLocaleString()}</span><span className={styles.StatsRecovered}>{recovered.toLocaleString()}</span></p>
             </div>)
     
 }

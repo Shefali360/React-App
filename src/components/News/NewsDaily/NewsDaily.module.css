@@ -1,5 +1,6 @@
 .Parent{
     background-color: #ffffff;
+    width:100%;
 }
 
 .OuterDiv img{
@@ -58,4 +59,32 @@
 .Line{
     margin:0 20px;
     border:1px solid black;
+}
+
+
+@media(max-width:767px){
+.OuterDiv{
+    display: block;
+    padding:20px 30px;
+   
+}
+.Title{
+    font-size:20px;
+   
+}
+.Desc{
+    font-size:17px;
+   
+}
+.Link a{
+    font-size:16px;
+}
+.Foot{
+   font-size:13px;
+    
+ }
+ 
+ .Time{
+   font-size:13px;
+ }
 }

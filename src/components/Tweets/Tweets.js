@@ -3,11 +3,14 @@ import TwitterImg from '../../images/twitter.png';
 import styles from './Tweets.module.css';
 
 class Tweets extends Component{
+  componentDidMount(){
+      
+  }
    
     render(){
         return(
         <div className={styles.Twitter}><p className={styles.Tweets}>Latest Tweets<img className={styles.TwitterIcon}src={TwitterImg} alt="twitter-icon"/></p>
-         <a className="twitter-timeline" data-height="490" 
+         <a className="twitter-timeline" data-height="490" data-chrome="noscrollbar"data-aria-polite="assertive" 
          href="https://twitter.com/WHO?ref_src=twsrc%5Etfw">Tweets by WHO</a>
         </div>
     );
