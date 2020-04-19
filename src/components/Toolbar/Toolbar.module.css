@@ -4,10 +4,12 @@
     background-color: #fff;
 }
 
-
+.Link{
+    text-decoration: none;
+    display: flex;
+}
 .Logo{
     height:100%;
-    display: flex;
     margin-top:10px;
     margin-left:30px;
 }
