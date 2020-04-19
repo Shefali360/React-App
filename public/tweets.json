@@ -1,0 +1,18 @@
+{   
+    "tweets":[
+    {
+      "created_at": "Sat Apr 18 10:48:00 +0000 2020",
+      "text": "To slow down #COVID19 transmission and reduce mortality, every country needs to keep implementing a National Action Plan that’s based on a whole-of society approach & a realistic appraisal of what can be done first.",
+      "user": {
+        "name": "World Health Organization (WHO)",
+        "screen_name": "WHO",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/875476478988886016/_l61qZdR_normal.jpg"
+      },
+      "entities": {
+      },
+      "retweet_count": 160,
+      "favorite_count": 295
+    }
+ 
+  ]
+}

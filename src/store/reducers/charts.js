@@ -6,7 +6,8 @@ const initialState={
     confirmed:0,
     recovered:0,
     deceased:0
-    }
+    },
+    error:false
 }
 
 
@@ -21,10 +22,14 @@ const renderCharts=(state,action)=>{
 
    })
 }
+const fetchChartFailed=(state,action)=>{
+    return(updateObject(state,{error:true}))
+}
 
 const reducer=(state=initialState,action)=>{
     switch(action.type){
         case actionTypes.RENDER_CHARTS:return renderCharts(state,action);
+        case actionTypes.FETCH_CHART_FAILED:return fetchChartFailed(state,action);
         default:return state;
     }
 }

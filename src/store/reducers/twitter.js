@@ -2,27 +2,31 @@ import * as actionTypes from '../actions/actionTypes';
 import {updateObject} from '../../shared/utility';
 
 const initialState={
-    map:[],
-    error:false
+   tweets:[],
+   error:false
 }
 
 
-const renderMap=(state,action)=>{
+const renderTweets=(state,action)=>{
     let arr=[];
-    arr=action.mapdata;
+    arr=action.tweetsdata;
    return updateObject(state,{
-       map:arr
+       tweets:arr
    }) 
 
 }
-const fetchMapFailed=(state,action)=>{
+
+const fetchTweetsFailed=(state,action)=>{
     return updateObject(state,{error:true})
 }
 
+
+
+
 const reducer=(state=initialState,action)=>{
     switch(action.type){
-        case actionTypes.RENDER_MAP:return renderMap(state,action);
-        case actionTypes.FETCH_MAP_FAILED:return fetchMapFailed(state,action);
+        case actionTypes.RENDER_TWEETS:return renderTweets(state,action);
+        case actionTypes.FETCH_TWEETS_FAILED:return fetchTweetsFailed(state,action);
         default:return state;
     }
 }

@@ -113,9 +113,13 @@ text-decoration: none;
 color:#ff0019;
 }
 
-@media(min-width:768px)and(max-width:1023px){
+@media(max-width:1023px){
 .Div a{
-    font-size:13px;
+    font-size:12px;
+}
+.DivDonate li{
+    margin-right:10px;
+    
 }
 }
 

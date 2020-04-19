@@ -1,6 +1,7 @@
 .Parent{
     background-color: #ffffff;
     width:100%;
+   
 }
 
 .OuterDiv img{
@@ -14,6 +15,7 @@
     background-color: #ffffff;
     display: flex;
     width:100%;
+    
 }
 
 .Text{

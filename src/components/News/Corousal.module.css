@@ -62,7 +62,7 @@
     background-color: #ff0019;
   }
 
-  @media(min-width:768px){
+  @media(max-width:1023px){
     .Heading{
         font-size:11px;
         font-weight:bold;
@@ -73,13 +73,13 @@
   @media(max-width:767px){
    
     .Heading{
-       
-        font-size:11px;
+        font-size:8px;
         font-weight:bold;
         
     }
     .NewsHeading{
-        font-size:14px;
+        font-size:12px;
+        /* line-height:1rem; */
     }
     
  

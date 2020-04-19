@@ -8,6 +8,13 @@ return{
 }
 
 }
+export const fetchMapFailed=()=>{
+    return {
+        type:actionTypes.FETCH_MAP_FAILED
+    }
+}
+
+
 
 export const fetchMapData=()=>{
     return dispatch=>{
@@ -16,7 +23,7 @@ export const fetchMapData=()=>{
         dispatch(renderMap(response.data.data.rows));
     })
     .catch(error=>{
-        console.log("error");
+      dispatch(fetchMapFailed());
     })
     }
 } 

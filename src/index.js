@@ -12,6 +12,7 @@ import searchReducer from './store/reducers/search';
 import mapReducer from './store/reducers/map';
 import chartsReducer from './store/reducers/charts';
 import newsReducer from './store/reducers/news';
+import twitterReducer from './store/reducers/twitter'
 
 
 const composeEnhancers = (process.env.NODE_ENV === 'development'?window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ :null)|| compose;
@@ -21,7 +22,8 @@ countries:countriesReducer,
 search:searchReducer,
 map:mapReducer,
 charts:chartsReducer,
-news:newsReducer
+news:newsReducer,
+twitter:twitterReducer
 });
 const store=createStore(rootReducer,composeEnhancers(
   applyMiddleware(thunk)

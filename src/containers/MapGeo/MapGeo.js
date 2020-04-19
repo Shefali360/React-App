@@ -3,7 +3,7 @@ import {Chart} from 'react-google-charts';
 import {connect} from 'react-redux';
 import * as actions from '../../store/actions/index';
 import styles from './MapGeo.module.css';
-
+import Aux from '../../hoc/Aux/Aux';
 class MapGeo extends Component{
     intervalId;
   componentDidMount() {
@@ -20,11 +20,11 @@ render(){
     let optionArray={
         colorAxis:{colors:['#ffC4C6','#ff797D','#ff6f7d','#ff0019']},
         backgroundColor:'#fbf6f6'
-       //   defaultColor:'#ff0019'
      }
+    let mapped=this.props.error?<p className={styles.Error}>Map can't be loaded...</p>:<p  className={styles.Loader}>Loading the map...</p>;
     if(this.props.map.length!==0){
         let mapgeo=this.props.map;
-        mapgeo.forEach((mapped)=>{
+        mapped=mapgeo.map((mapped)=>{
             let num=mapped.total_cases.split(',').join('');
             let finalvar=parseInt(num);
             let newarray=[];
@@ -32,26 +32,32 @@ render(){
                 mapped.country="United States";
             }
             newarray.push(mapped.country,finalvar);
-            finalarray.push(newarray);   
+            return finalarray.push(newarray);   
         })
         finalarray.shift();
         finalarray.unshift(["Country","Cases"]);
-    }
-return(
+    return(
     <Chart
   chartType="GeoChart"
   data={finalarray}
   options={optionArray}
-  loader={<div className={styles.Loader}>Loading the map...</div>}
   mapsApiKey='AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
   rootProps={{ 'data-testid': '1' }}
 />
-)}
+    )}
+
+return(
+    <Aux>
+        {mapped}
+    </Aux>
+)
+}
 }
 
 const mapStateToProps=state=>{
     return{
-        map:state.map.map
+        map:state.map.map,
+        error:state.map.error
     }
 }
 

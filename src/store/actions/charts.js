@@ -9,6 +9,11 @@ return{
 
 }
 
+export const fetchChartFailed=()=>{
+    return{
+        type:actionTypes.FETCH_CHART_FAILED
+    }
+}
 export const fetchCharts=()=>{
     return dispatch=>{
    
@@ -16,8 +21,8 @@ export const fetchCharts=()=>{
     .then(response=>{
         dispatch(renderCharts(response.data));
     })
-    .then(error=>{
-        console.log("sorry")
+    .catch(error=>{
+        dispatch(fetchChartFailed());
     })
 }
 } 

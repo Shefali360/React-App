@@ -50,8 +50,8 @@ class NewsAndUpdates extends Component {
         this.startRolling();
     }
 
-    componentWillUnmount() {
-        clearInterval(this.intervalId);
+    componentWillUnmount(){
+        clearInterval(this.state.handle);
     }
 
     stopRolling=()=> {

@@ -16,8 +16,8 @@ intervalId;
         clearInterval(this.intervalId)
     }
     render(){
-        let news=this.props.error?<p>News can't be loaded.</p>:<Spinner/>;
-        if(this.props.news){
+        let news=this.props.error?<p>News can't be loaded...</p>:<Spinner/>;
+        if(this.props.news.length!==0){
             let array=this.props.news;
           news=array.map(news=>{
               return(

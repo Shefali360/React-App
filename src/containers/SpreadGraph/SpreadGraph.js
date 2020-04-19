@@ -28,6 +28,9 @@ class SpreadGraph extends Component {
   render() {
     let casesarray = [];
     let num;
+    if(this.props.error){
+      return(<p className={styles.Error}>Chart can't be loaded...</p>);
+    }
     if (this.props.chartdata.confirmed) {
       let cases = this.props.chartdata[this.state.currentkey];
       for (let key in cases) {
@@ -102,7 +105,7 @@ class SpreadGraph extends Component {
       );
     }
     if(!this.props.chartdata.confirmed){
-      return (<p>Error occurred!</p>);
+      return null;
     }
   }
 }
@@ -111,6 +114,7 @@ const mapStateToProps = (state) => {
   return {
     chartdata: state.charts.chart,
     cases: state.cases.coronaStats,
+    error:state.cases.error
   };
 };
 

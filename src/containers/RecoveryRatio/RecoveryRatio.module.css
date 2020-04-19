@@ -37,7 +37,7 @@
     margin:20px 0px;
 }
 
-@media(min-width:768px)and(max-width:1023px){
+@media(max-width:1023px){
     .RecoveryRatio{
        margin:0;
        margin-right:15px;
@@ -54,4 +54,26 @@
         width:300px;
         margin:20px 0px;
     }
+}
+
+@media(max-width:767px){
+    .RecoveryRatio{
+        background-color: #fff;
+        margin:10px 0;
+        border-radius: 7px;
+        padding:20px 0px;
+        font-weight: bold;
+        min-height:300px;
+        
+     }
+ 
+     .RecoveryRatio p{
+         font-size:inherit;
+     }
+     .Progress{
+        height:200px;
+    width:200px;
+    margin:20px 0px;
+     }
+
 }

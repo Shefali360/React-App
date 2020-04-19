@@ -3,9 +3,7 @@ import TwitterImg from '../../images/twitter.png';
 import styles from './Tweets.module.css';
 
 class Tweets extends Component{
-  componentDidMount(){
-      
-  }
+  
    
     render(){
         return(
