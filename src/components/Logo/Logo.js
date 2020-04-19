@@ -1,7 +1,7 @@
 import React from 'react';
 import coronaLogo from '../../images/corona.png';
 import styles from './Logo.module.css';
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/Wrap/Wrap';
 
 const Logo=()=>{
     return(

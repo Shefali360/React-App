@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../../store/actions/index';
 import Twitter from '../../components/Tweets/TweetArea';
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/Wrap/Wrap';
 
 class Twit extends Component{
     intervalId;
@@ -28,7 +28,7 @@ class Twit extends Component{
             retweet=((retweet/1000).toFixed(1))+'k';
            }
             return(
-                <Twitter key={tweet.user}image={tweet.user.profile_image_url_https} user={tweet.user.name}
+                <Twitter key={tweet.user.name}image={tweet.user.profile_image_url_https} user={tweet.user.name}
                 account={tweet.user.screen_name} content={tweet.text}likes={like}
                 retweet={retweet} time={tweet.created_at}></Twitter>
             )

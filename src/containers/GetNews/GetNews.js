@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index';
 import News from '../../components/News/NewsDaily/Newsdaily';
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/Wrap/Wrap';
 import Spinner from '../../components/Spinner/Spinner';
 
 class GetNews extends Component{

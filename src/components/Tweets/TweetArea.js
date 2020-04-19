@@ -13,8 +13,8 @@ const TweetArea=(props)=>{
         </div>
         <p className={styles.Content}>{props.content}</p>
     <div className={styles.Foot}>
-    <span className={styles.Likes}><i class="fa fa-heart"></i>{props.likes}</span>
-    <span className={styles.Retweet}><i class="fa fa-retweet"></i>{props.retweet}</span>
+    <span className={styles.Likes}><i className="fa fa-heart"></i>{props.likes}</span>
+    <span className={styles.Retweet}><i className="fa fa-retweet"></i>{props.retweet}</span>
     <span className={styles.Time}>{props.time}</span>
     </div>
     <hr className={styles.Line}/>

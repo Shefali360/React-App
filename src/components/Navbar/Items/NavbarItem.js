@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from './NavbarItem.module.css';
-import Aux from '../../../hoc/Aux/Aux';
+import Aux from '../../../hoc/Wrap/Wrap';
 
 const NavbarItem=(props)=>{
     return(<Aux><li className={styles.NavbarList}>

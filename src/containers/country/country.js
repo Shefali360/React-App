@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CountrywiseCases from "../../components/countrywiseCases/countrywiseCases";
 import * as actions from "../../store/actions/index";
 import { connect } from "react-redux";
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/Wrap/Wrap';
 import styles from './country.module.css';
 import Spinner from '../../components/Spinner/Spinner';
 

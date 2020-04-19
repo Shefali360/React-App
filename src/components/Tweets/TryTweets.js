@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import TwitterImg from "../../images/twitter.png";
 import styles from "./TryTweets.module.css";
 import Twitters from '../../containers/Twitter/Twitter';

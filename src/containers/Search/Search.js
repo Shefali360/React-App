@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./Search.module.css";
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/Wrap/Wrap';
 import {connect} from 'react-redux';
 import * as actions from "../../store/actions/index";
 import CountrywiseCases from "../../components/countrywiseCases/countrywiseCases";

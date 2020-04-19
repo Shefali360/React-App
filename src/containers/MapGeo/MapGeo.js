@@ -3,7 +3,7 @@ import {Chart} from 'react-google-charts';
 import {connect} from 'react-redux';
 import * as actions from '../../store/actions/index';
 import styles from './MapGeo.module.css';
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/Wrap/Wrap';
 class MapGeo extends Component{
     intervalId;
   componentDidMount() {

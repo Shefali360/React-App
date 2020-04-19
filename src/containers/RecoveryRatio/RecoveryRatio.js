@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import styles from './RecoveryRatio.module.css';
 import {CircularProgressbar,buildStyles} from 'react-circular-progressbar';
 import {connect} from 'react-redux';
-import Aux from'../../hoc/Aux/Aux';
+import Aux from'../../hoc/Wrap/Wrap';
 import Spinner from '../../components/Spinner/Spinner';
 
 class RecoveryRatio extends Component{
@@ -17,7 +17,6 @@ class RecoveryRatio extends Component{
         newObj[key] = object[key];
         data.push(newObj);
       }
-      console.log(data);
     datas=(data.filter(items=>{
         for(let value in items){
             if(value==="totalCases"||value==="recovered")

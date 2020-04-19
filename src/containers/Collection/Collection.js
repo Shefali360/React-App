@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import Graphs from "../../components/CasesDiv/Graphs/Graphs";
 import styles from './Collection.module.css';
 import Label from '../../components/CasesDiv/Label/Label';
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/Wrap/Wrap';
 import Spinner from '../../components/Spinner/Spinner';
 
 class Collection extends Component {

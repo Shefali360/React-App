@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Corousal.module.css';
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/Wrap/Wrap';
 
 const News = (props) => {
     return (
@@ -13,7 +13,7 @@ const News = (props) => {
                 <div>
                     <Link className={styles.Heading} to={props.route}>{props.heading}</Link>
                     <p className={styles.NewsHeading}>{props.news}</p>
-                    <Link className={styles.Btn} to={props.route}>{ props.buttonText}<i class="fa fa-arrow-right"></i></Link>
+                    <Link className={styles.Btn} to={props.route}>{ props.buttonText}<i className="fa fa-arrow-right"></i></Link>
                 </div>
             </div>
         </Aux>
