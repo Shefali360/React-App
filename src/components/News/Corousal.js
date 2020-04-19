@@ -13,7 +13,7 @@ const News = (props) => {
                 <div>
                     <Link className={styles.Heading} to={props.route}>{props.heading}</Link>
                     <p className={styles.NewsHeading}>{props.news}</p>
-                    <Link className={styles.Btn} to={props.route}>{ props.buttonText}</Link>
+                    <Link className={styles.Btn} to={props.route}>{ props.buttonText}<i class="fa fa-arrow-right"></i></Link>
                 </div>
             </div>
         </Aux>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TwitterImg from "../../images/twitter.png";
 import styles from "./TryTweets.module.css";
+import Twitters from '../../containers/Twitter/Twitter';
 
 const Twitter = (props) => {
   return (
@@ -13,17 +14,7 @@ const Twitter = (props) => {
           alt="twitter-icon"
         />
       </p>
-      <div>
-        <div>
-          <img src={props.image} alt="profile-icon" />
-          <div>
-            <p>{props.user}</p>
-            <p>@{props.account}</p>
-          </div>
-        </div>
-        <p>{props.content}</p>
-    <div><span>{props.likes}{props.retweet}{props.time}</span></div>
-      </div>
+      <Twitters/>
     </div>
   );
 };

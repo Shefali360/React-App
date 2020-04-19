@@ -24,8 +24,8 @@ class Collection extends Component {
   }
 
   render() {
-    let casesData=this.props.error?<p>Cases can't be loaded</p>:<Spinner/>;
-    if (this.props.cases) {
+    let casesData=this.props.error?<div className={styles.Error}><p >Cases can't be loaded</p></div>:<Spinner/>;
+    if (this.props.cases.totalCases) {
     let data = [];
       let object = this.props.cases;
       for (let key in object) {

@@ -6,12 +6,22 @@
     margin:10px 15px 10px 0px;
     border-radius: 7px;
     padding:20px 0px;
+    min-height:110px;
 }
 
 .Label{
     font-size:14px;
     font-weight: bold;
     
+}
+.Error{
+    font-size:20px;
+    font-weight: bold;
+    color:#ff0019;
+    background-color: #fff;
+    min-height:110px;
+    margin:10px 0;
+    border-radius:7px;
 }
 
 .Case{

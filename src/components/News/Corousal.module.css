@@ -40,9 +40,7 @@
     display:inline-block;
 }
 
-.Btn:after{
-    content:"\f178";  
-}
+
 
 .DotContainer{
     text-align: center;

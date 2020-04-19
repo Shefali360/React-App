@@ -4,7 +4,7 @@ import Collection from '../../containers/Collection/Collection';
 import RecoveryRatio from '../../containers/RecoveryRatio/RecoveryRatio';
 import styles from './MainContainer.module.css';
 import Search from '../../containers/Search/Search';
-import Twitter from '../../containers/Twitter/Twitter';
+import Twitter from '../../components/Tweets/TryTweets';
 import NewsAndUpdates from '../../components/NewsAndUpdates/NewsAndUpdates';
 import Map from '../../components/Map/Map';
 import SpreadGraph from '../../containers/SpreadGraph/SpreadGraph';

@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../../store/actions/index';
-import Twitter from '../../components/Tweets/TryTweets';
+import Twitter from '../../components/Tweets/TweetArea';
 import Aux from '../../hoc/Aux/Aux';
 
 class Twit extends Component{
@@ -19,14 +19,21 @@ class Twit extends Component{
     if(this.props.tweets.length!==0){
         let t=this.props.tweets;
        tweets=t.map((tweet)=>{
+           let like=tweet.favorite_count;
+           if(like>999){
+            like=((like/1000).toFixed(1))+'k';
+           }
+           let retweet=tweet.retweet_count;
+           if(retweet>999){
+            retweet=((retweet/1000).toFixed(1))+'k';
+           }
             return(
                 <Twitter key={tweet.user}image={tweet.user.profile_image_url_https} user={tweet.user.name}
-                account={tweet.user.screen_name} content={tweet.text}likes={tweet.favorite_count}
-                retweet={tweet.retweet_count} time={tweet.created_at}></Twitter>
+                account={tweet.user.screen_name} content={tweet.text}likes={like}
+                retweet={retweet} time={tweet.created_at}></Twitter>
             )
         }
         )
-
     }
         return(
             <Aux>

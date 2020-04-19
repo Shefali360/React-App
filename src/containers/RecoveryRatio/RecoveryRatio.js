@@ -3,11 +3,12 @@ import styles from './RecoveryRatio.module.css';
 import {CircularProgressbar,buildStyles} from 'react-circular-progressbar';
 import {connect} from 'react-redux';
 import Aux from'../../hoc/Aux/Aux';
+import Spinner from '../../components/Spinner/Spinner';
 
 class RecoveryRatio extends Component{
     render(){
-    let datas = null;
-    if (this.props.cases) {
+    let datas =this.props.error?<div className={styles.Error}><p>RecoveryRatio cannot be loaded</p></div>:<Spinner/>;
+    if (this.props.cases.totalCases) {
     let data = [];
     let arr=[];
       let object = this.props.cases;
@@ -16,6 +17,7 @@ class RecoveryRatio extends Component{
         newObj[key] = object[key];
         data.push(newObj);
       }
+      console.log(data);
     datas=(data.filter(items=>{
         for(let value in items){
             if(value==="totalCases"||value==="recovered")
@@ -28,6 +30,9 @@ class RecoveryRatio extends Component{
     let affected=arr[0];
     let recovered=arr[1];
     let percent=((arr[1]/arr[0])*100).toFixed(1);
+    // if(isNaN(percent)){
+    //     percent=
+    // }
     if(affected>999){
         affected=((affected/1000).toFixed(1))+'k';
     }
@@ -36,7 +41,7 @@ class RecoveryRatio extends Component{
         recovered=((recovered/1000).toFixed(1))+'k';
     }
 
-        return (<div className={styles.RecoveryRatio}><p>Ratio of Recovery</p>
+        return (<div className={styles.RecoveryRatio}><p >Ratio of Recovery</p>
         <CircularProgressbar className={styles.Progress}value={percent} text={`${percent}%`} 
         styles={buildStyles({
             textSize:'14px',
@@ -60,7 +65,8 @@ return(
 
 const mapStateToProps=state=>{
     return{
-       cases:state.cases.coronaStats
+       cases:state.cases.coronaStats,
+       error:state.cases.error
     }
 }
 
