@@ -1,7 +1,7 @@
 import React from "react";
 import TwitterImg from "../../images/twitter.png";
 import styles from "./TryTweets.module.css";
-import Twitters from '../../containers/Twitter/Twitter';
+import Twitters from "../../containers/Twitter/Twitter";
 
 const Twitter = (props) => {
   return (
@@ -14,7 +14,7 @@ const Twitter = (props) => {
           alt="twitter-icon"
         />
       </p>
-      <Twitters/>
+      <Twitters />
     </div>
   );
 };

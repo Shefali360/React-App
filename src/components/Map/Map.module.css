@@ -24,6 +24,7 @@
 
 .MapHeading span{
     font-size: 14px;
+    display:inline-flex;
 
 }
 
@@ -38,8 +39,6 @@
 
 .FirstIndicator:before{
     background-color:#ff0019 ;
-
-
 }
 
 .SecondIndicator:before{

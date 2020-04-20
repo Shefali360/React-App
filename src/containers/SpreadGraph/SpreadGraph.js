@@ -45,9 +45,12 @@ class SpreadGraph extends Component {
         casesarray.push(arr);
       }
       casesarray.unshift(["date", "cases"]);
-      let date = casesarray[casesarray.length - 1];
-      let now = date[0];
-      let today = date[1];
+      let todaydate = casesarray[casesarray.length - 1];
+      let yesterdaydate = casesarray[casesarray.length - 2];
+      let now =todaydate[0];
+      let today = todaydate[1];
+      let yesterday=yesterdaydate[1];
+      let todaycases=today-yesterday;
       let type = this.state.currentkey;
       let upper = type.toUpperCase();
       if (this.state.currentkey === "confirmed") {
@@ -62,8 +65,8 @@ class SpreadGraph extends Component {
       if (num > 999) {
         num = (num / 1000).toFixed(1) + "k";
       }
-      if (today > 999) {
-        today = (today / 1000).toFixed(1) + "k";
+      if (todaycases > 999) {
+        todaycases = (todaycases / 1000).toFixed(1) + "k";
       }
       return (
         <div className={styles.MainBox}>
@@ -96,7 +99,7 @@ class SpreadGraph extends Component {
               <p className={styles.Type}>{now}</p>
               <p className={styles.Num}>
                 {num}
-                <span className={styles.TodayCases}>+{today}</span>
+                <span className={styles.TodayCases}>+{todaycases}</span>
               </p>
             </div>
             <Chart dataarray={casesarray} />
