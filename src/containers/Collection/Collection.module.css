@@ -32,7 +32,6 @@
 
 @media(max-width:1023px){
     .Box{
-        width:calc((100%/4)-10px);
        padding:20px 1px;
        margin:10px;
     }
