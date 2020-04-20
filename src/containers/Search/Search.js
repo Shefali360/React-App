@@ -61,7 +61,7 @@ class Search extends Component {
           changed={this.inputChangedHandler}
           keypressed={this.keyPress}
         />
-        {this.props.countries.length!==0 && this.state.value ? searchedData : ""}
+        {this.props.countries && this.props.countries.length!==0 && this.state.value ? searchedData : ""}
         <Country />
       </Aux>
     );
